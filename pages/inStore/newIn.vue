@@ -153,7 +153,7 @@
 		onLoad(options) {
 			// this.type = options.type;
 			this.type == 0 ? (this.barCode = options.id, this.productCode()) : this.barCode = "";
-			this.barCode = "1579067995071";
+			// this.barCode = "1579067995071";
 			this.productCode()
 			// this.minHeight = uni.getStorageSync('height')
 			// console.log(this.minHeight)

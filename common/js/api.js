@@ -22,15 +22,32 @@ const api = {
 			return val[num]
 		}else{
 			let str1=err.split('?')[0];
-			let str2=err.split('?')[1];
-			let str3=str2.split('=');
+			let lastData=err.split('?')[1]
+			let arr = lastData.split('&');
+			let str4='';
+			let endStr='';
+			console.log(arr)
 			error.forEach((item,index)=>{
 				if(item==str1){
 					num=index
 				}
 			})
-			let str4=val[num].replace('{'+str3[0]+'}',str3[1])
-			return str4
+			str4=val[num];
+			// console.log(str4)
+			// setTimeout(()=>{
+				for(let i;i<arr.length;i++){
+					// let newStr=arr[i].split("=")
+					console.log(1)
+					 str4=str4.replace('{'+arr[i].split('=')[0]+'}',arr[i].split('=')[1])
+				}
+				console.log(str4)
+			// })
+			
+			setTimeout(()=>{
+				return str4
+			},30)
+			
+			
 		}
 		
 	},

@@ -217,51 +217,51 @@
 				}).catch(() => {})
 			},
 			subLogin() {
-				// uni.navigateTo({
-				// 	url: '/pages/home/index'
-				// })
+				uni.navigateTo({
+					url: '/pages/home/index'
+				})
 				uni.showLoading({
 					title: '加载中....'
 				})
-				let parmas = {
-					loginStr: crypto.encryptByDES(this.acount, this.pwd)
-				};
-				console.log(parmas)
-				this._reqw.post(parmas, 'user/login').then(res => {
-					console.log(res)
-					uni.hideLoading();
-					if (res.data.flag) {
-						uni.setStorageSync('Xcsrftoken', res.header['x-csrf-token']);
-						uni.setStorageSync('account', res.data.result.account);
-						uni.setStorageSync('userName', res.data.result.userName);
-						uni.setStorageSync('userId', res.data.result.userId);
-						if (this.check[0].checked) {
-							uni.navigateTo({
-								url: '/pages/home/index'
-							})
-						} else {
-							uni.navigateTo({
-								url: '/pages/home/indexTwo'
-							})
-						}
-					} else if (!res.data.flag && res.data.errorCode) {
-						if (res.data.errorCode === 'I010104') {
-							this.first = true
-						} else if(res.data.errorCode==='I010117') {
-							this.$refs.Message.error({
-								content: res.result.leftTimes,
-								duration: 2000,
-								background: false
-							})
+				// let parmas = {
+				// 	loginStr: crypto.encryptByDES(this.acount, this.pwd)
+				// };
+				// console.log(parmas)
+				// this._reqw.post(parmas, 'user/login').then(res => {
+				// 	console.log(res)
+				// 	uni.hideLoading();
+				// 	if (res.data.flag) {
+				// 		uni.setStorageSync('Xcsrftoken', res.header['x-csrf-token']);
+				// 		uni.setStorageSync('account', res.data.result.account);
+				// 		uni.setStorageSync('userName', res.data.result.userName);
+				// 		uni.setStorageSync('userId', res.data.result.userId);
+				// 		if (this.check[0].checked) {
+				// 			uni.navigateTo({
+				// 				url: '/pages/home/index'
+				// 			})
+				// 		} else {
+				// 			uni.navigateTo({
+				// 				url: '/pages/home/indexTwo'
+				// 			})
+				// 		}
+				// 	} else if (!res.data.flag && res.data.errorCode) {
+				// 		if (res.data.errorCode === 'I010104') {
+				// 			this.first = true
+				// 		} else if(res.data.errorCode==='I010117') {
+				// 			this.$refs.Message.error({
+				// 				content: res.result.leftTimes,
+				// 				duration: 2000,
+				// 				background: false
+				// 			})
 
-						}
-					}
-					if (!res.data.flag) {
-						this.getKaptcha();
-					}
+				// 		}
+				// 	}
+				// 	if (!res.data.flag) {
+				// 		this.getKaptcha();
+				// 	}
 
 
-				}).catch(err => {})
+				// }).catch(err => {})
 			},
 			// getisLogon() {
 			// 	this._reqw.get({}, "user/isLogon").then(res => {

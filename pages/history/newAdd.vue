@@ -461,7 +461,11 @@
 						this.chargeableWeight =0,
 						this.rateClass = '',
 						this.productCode = ''
-					):this.error(res.result)
+					):this.$refs.Message.error({
+						content: this.$api.getError(res.errorCode),
+						duration: 2000,
+						background: false
+					})
 				}).catch(err => {})
 			}
 

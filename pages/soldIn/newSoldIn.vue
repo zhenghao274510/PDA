@@ -157,8 +157,8 @@
 			this.type = options.type;
 			this.type == 0 ? (this.barCode = options.id, this.loadData()) : this.barCode = ""
 			this.minHeight = uni.getStorageSync('height')
-			this.barCode = "1577928797888";
-			this.loadData();
+			// this.barCode = "1577928797888";
+			// this.loadData();
 			// this.initValue = this.lang.common.initValue;
 			console.log(this.minHeight)
 
@@ -198,8 +198,11 @@
 							res
 							.result.productCode, this.wmsWarehouseId = res.result.wmsWarehouseId, this.wmsStockId = res.result.wmsStockId,
 							this.wmsWarehouseName = res.result.wmsWarehouseName
-						) : this.$api.tip(
-							res.errorCode)
+						) : this.$refs.Message.error({
+							content: this.$api.getError(res.errorCode),
+							duration: 2000,
+							background: false
+						})
 					}).catch(err => {})
 				}
 
