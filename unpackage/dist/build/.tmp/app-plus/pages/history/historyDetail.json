@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "message": "/components/bobo-message/bobo-message",
+    "page-heade": "/components/page-head",
+    "poup-hide": "/components/poup-hide",
+    "good-type-select": "/components/xfl-select/goodType-select"
+  }
+}

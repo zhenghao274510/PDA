@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "page-heade": "/components/page-head",
+    "page-foot": "/components/page-foot",
+    "store-select": "/components/xfl-select/store-select",
+    "xfl-select": "/components/xfl-select/xfl-select",
+    "w-picker": "/components/w-picker/w-picker"
+  }
+}

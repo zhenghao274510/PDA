@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "page-heade": "/components/page-head",
+    "uni-load-more": "/components/uni-load-more/uni-load-more"
+  }
+}

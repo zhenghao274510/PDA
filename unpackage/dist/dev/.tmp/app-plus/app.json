@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/resgin/index",
+    "pages/history/history",
+    "pages/home/index",
+    "pages/home/indexTwo",
+    "pages/history/newAdd",
+    "pages/history/historyDetail",
+    "pages/history/chooseHistory",
+    "pages/InventoryQuery/queryInventory",
+    "pages/InventoryQuery/jiluchoose",
+    "pages/outStore/newOut",
+    "pages/outStore/historyoutStore",
+    "pages/outStore/outStoreDetail",
+    "pages/outStore/outStorechoose",
+    "pages/outStore/outStoreGood",
+    "pages/inStore/newIn",
+    "pages/inStore/historyInStore",
+    "pages/inStore/inStoreDetail",
+    "pages/inStore/inStorechoose",
+    "pages/inStore/inStoreGood",
+    "pages/stockStore/historyStockStore",
+    "pages/stockStore/stockStoreDetails",
+    "pages/stockStore/stockDetails",
+    "pages/stockStore/stockStore",
+    "pages/stockStore/historyDetail",
+    "pages/stockStore/stockchoose",
+    "pages/stockStore/newStock",
+    "pages/soldIn/headSoldIn",
+    "pages/soldIn/newSoldIn",
+    "pages/soldIn/soldInHistory",
+    "pages/soldIn/soldInHistoryDetail",
+    "pages/soldIn/jiluchoose",
+    "pages/soldOut/headSoldOut",
+    "pages/soldOut/newSoldOut",
+    "pages/soldOut/soldOutHistory",
+    "pages/soldOut/soldOutHistoryDetail",
+    "pages/soldOut/jiluchoose",
+    "pages/stockStore/newStockStoreDetails"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#f8f8f8",
+    "titleNView": false
+  },
+  "nvueCompiler": "uni-app",
+  "renderer": "auto",
+  "splashscreen": {
+    "alwaysShowBeforeRender": true,
+    "autoclose": false
+  },
+  "appname": "Pad",
+  "compilerVersion": "2.5.1",
+  "usingComponents": {
+    "message": "/components/bobo-message/bobo-message"
+  }
+}

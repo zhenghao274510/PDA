@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "message": "/components/bobo-message/bobo-message",
+    "page-heade": "/components/page-head",
+    "page-foot": "/components/page-foot",
+    "house-select": "/components/xfl-select/hose-select",
+    "good-name-select": "/components/xfl-select/goodName-select",
+    "good-type-select": "/components/xfl-select/goodType-select",
+    "flight-select": "/components/xfl-select/flight-select",
+    "xfl-select": "/components/xfl-select/xfl-select",
+    "x-input": "/components/x-input/x-input"
+  }
+}

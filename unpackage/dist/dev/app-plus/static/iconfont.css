@@ -1,0 +1,71 @@
+@font-face {
+	font-family: "iconfont";
+	src: url('static/iconfont.ttf');
+}
+@font-face {
+	font-family: "iconfont";
+	src: url('static/iconfont2.ttf');
+}
+@font-face {
+	font-family: "iconfont";
+	src: url('static/iconfont1.ttf');
+}
+.iconfont {
+	font-family:"iconfont" !important;
+	font-size: 40px;
+	font-style: normal;
+	color: #ff8300;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-del:before {
+	content: "\e6ac";
+}
+
+.icon-back-m:before {
+	content: "\e60f";
+}
+
+.icon-haofangtuo400iconfontshaixuanzhedie:before {
+	content: "\e692";
+}
+
+.icon-haofangtuo400iconfontshaixuanzhedieguanbi:before {
+	content: "\e6dc";
+}
+
+.icon-iconseach:before {
+	content: "\e611";
+}
+
+.icon-downpx:before {
+	content: "\e60e";
+}
+
+.icon-up:before {
+	content: "\e610";
+}
+
+.icon-lishijilu:before {
+  content: "\e64c";
+}
+.icon-zhedie:before {
+	content: "\e643";
+}
+.icon-xuanzhong:before {
+  content: "\e611";
+}
+
+.icon-zhanghao:before {
+  content: "\e618";
+}
+
+.icon-mima:before {
+  content: "\e619";
+}
+
+.icon-duoxuan_weixuanzhong:before {
+  content: "\e65d";
+}
+

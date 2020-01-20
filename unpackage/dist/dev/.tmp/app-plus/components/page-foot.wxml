@@ -1,0 +1,1 @@
+<view class="{{['page-share-title',(show)?'hover':'']}}" hover-class="hover" data-event-opts="{{[['tap',[['submit',['$event']]]]]}}" bindtap="__e"><block wx:if="{{footTxt!=''}}"><text>{{footTxt}}</text></block></view>

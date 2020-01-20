@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "message": "/components/bobo-message/bobo-message",
+    "page-heade": "/components/page-head",
+    "page-foot": "/components/page-foot",
+    "xfl-select": "/components/xfl-select/xfl-select",
+    "x-input": "/components/x-input/x-input",
+    "w-picker": "/components/w-picker/w-picker",
+    "good-type-select": "/components/xfl-select/goodType-select",
+    "store-select": "/components/xfl-select/store-select"
+  }
+}

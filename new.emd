@@ -1,0 +1,49 @@
+   组件  说明 
+   
+   flight-select    航单 下拉列表
+   goodType-select   货品分类下拉列表
+   hose-select   分拣登记下拉列表
+   goodName-select  货品名称  下拉列表
+   store-select   仓库 下拉菜单
+   shop-select  商品代号
+   
+   
+   参数  
+   goodsType: [],  // 货物分类
+   ManifestType: [], //  航单下拉菜单
+   goodNameType: [], //  货品名称
+   categoryList: [],    //分拣登记点
+   wmsWarehouseDetailIdNameList:[]   储位下拉
+   
+ 文件说明
+ history  登记
+ home  选择作业
+ inStore 入库
+ outStore 出库
+ InventoryQuery 库存查询
+soldIn 上架作业
+soldOut 下架作业
+stockStore 库存盘点
+
+
+12.28    所有  新增  和筛选 查询 接口  有待 确认   和  对接
+ 历史查询 详情  ok 
+ 
+ 库存查询  筛选 ok
+ 
+ 
+ 
+ 
+ 
+ 
+ 数据   有误   
+ 
+ 
+ 库存盘点  仓库名称  不是 id
+ 
+ 
+   
+   
+   
+   
+   

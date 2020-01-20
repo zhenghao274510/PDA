@@ -1,0 +1,153 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/resgin/index"
+		},
+		{
+			"path": "pages/history/history",
+			"style": {
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/home/index",
+			"plus": {
+				"statusbar": {
+					"immersed": false
+				}
+			}
+
+		},
+		{
+			"path": "pages/home/indexTwo"
+		},
+		{
+			"path": "pages/history/newAdd"
+		},
+		{
+			"path": "pages/history/historyDetail"
+		},
+		{
+			"path": "pages/history/chooseHistory"
+		},
+		{
+			"path": "pages/InventoryQuery/queryInventory"
+		},
+		{
+			"path": "pages/InventoryQuery/jiluchoose"
+		},
+		{
+			"path": "pages/outStore/newOut"
+		},
+		{
+			"path": "pages/outStore/historyoutStore"
+		},
+		{
+			"path": "pages/outStore/outStoreDetail"
+		},
+		{
+			"path": "pages/outStore/outStorechoose"
+		},
+		{
+			"path": "pages/outStore/outStoreGood",
+			"style": {
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/inStore/newIn"
+		},
+		{
+			"path": "pages/inStore/historyInStore"
+		},
+		{
+			"path": "pages/inStore/inStoreDetail"
+		},
+		{
+			"path": "pages/inStore/inStorechoose"
+		},
+		{
+			"path": "pages/inStore/inStoreGood",
+			"style": {
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/stockStore/historyStockStore"
+		},
+		{
+			"path": "pages/stockStore/stockStoreDetails"
+		},
+		{
+			"path": "pages/stockStore/stockDetails"
+		},
+		{
+			"path": "pages/stockStore/stockStore"
+		},
+		{
+			"path": "pages/stockStore/historyDetail"
+		},
+		{
+			"path": "pages/stockStore/stockchoose"
+		},
+		{
+			"path": "pages/stockStore/newStock",
+			"style": {
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/soldIn/headSoldIn",
+			"style": {
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/soldIn/newSoldIn"
+		},
+		{
+			"path": "pages/soldIn/soldInHistory"
+		},
+		{
+			"path": "pages/soldIn/soldInHistoryDetail"
+		},
+		{
+			"path": "pages/soldIn/jiluchoose"
+		},
+		{
+			"path": "pages/soldOut/headSoldOut",
+			"style": {
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/soldOut/newSoldOut",
+			"style": {
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/soldOut/soldOutHistory"
+		},
+		{
+			"path": "pages/soldOut/soldOutHistoryDetail"
+		},
+		
+		{
+			"path": "pages/soldOut/jiluchoose"
+		},
+		{
+			"path": "pages/stockStore/newStockStoreDetails"
+		}
+	],
+	"pageOrientation": "auto",
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#f8f8f8",
+		"app-plus": {
+			"titleNView": false
+		}
+
+	}
+}

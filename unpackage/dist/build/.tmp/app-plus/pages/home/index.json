@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "message": "/components/bobo-message/bobo-message",
+    "nav-top": "/components/nav-top"
+  }
+}

@@ -1,0 +1,39 @@
+
+.uni-page-scan-con.data-v-5f75b344 {
+	background: transparent;
+	width: 95%;
+	height: 160rpx;
+	margin-left: 5%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.uni-page-scan-left.data-v-5f75b344 {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	height: 160rpx;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+}
+.imgsBack.data-v-5f75b344 {
+	width: 60rpx;
+	height: 60rpx;
+}
+.imgsLi.data-v-5f75b344 {
+	width: 40rpx;
+	height: 40rpx;
+	margin-top: 10rpx;
+}
+.uni-page-scan-title.data-v-5f75b344 {
+	font-size: 40rpx;
+	font-weight: bold;
+}
+

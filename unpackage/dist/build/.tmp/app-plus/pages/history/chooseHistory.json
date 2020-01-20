@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "message": "/components/bobo-message/bobo-message",
+    "page-heade": "/components/page-head",
+    "page-foot": "/components/page-foot",
+    "xfl-select": "/components/xfl-select/xfl-select",
+    "x-input": "/components/x-input/x-input",
+    "shop-select": "/components/xfl-select/shop-select",
+    "house-select": "/components/xfl-select/hose-select",
+    "good-type-select": "/components/xfl-select/goodType-select",
+    "good-name-select": "/components/xfl-select/goodName-select",
+    "flight-select": "/components/xfl-select/flight-select",
+    "test": "/components/xfl-select/test"
+  }
+}

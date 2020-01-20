@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "message": "/components/bobo-message/bobo-message",
+    "page-heade": "/components/page-head",
+    "uni-load-more": "/components/uni-load-more/uni-load-more"
+  }
+}

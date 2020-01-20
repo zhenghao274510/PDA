@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "message": "/components/bobo-message/bobo-message",
+    "page-heade": "/components/page-head",
+    "page-foot": "/components/page-foot",
+    "poup-hide": "/components/poup-hide"
+  }
+}

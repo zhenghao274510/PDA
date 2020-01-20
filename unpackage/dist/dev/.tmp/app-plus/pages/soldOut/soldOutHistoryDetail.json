@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "page-heade": "/components/page-head"
+  }
+}

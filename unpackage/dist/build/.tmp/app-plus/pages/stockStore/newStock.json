@@ -1,0 +1,6 @@
+{
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "store-select": "/components/xfl-select/store-select"
+  }
+}
