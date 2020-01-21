@@ -121,7 +121,7 @@
 		},
 		onReachBottom() {
 			this.status = "loading";
-			this.totalPage > this.page ? (this.page += 1, this.loadData()) : setTimeout(() => {
+			this.totalPage > this.page ? (this.page ++, this.loadData()) : setTimeout(() => {
 				this.status = "noMore"
 			}, 500)
 		},
@@ -139,7 +139,8 @@
 				e == 0 ? uni.navigateBack() : this.$api.navTo("/pages/history/chooseHistory")
 			},
 			loadData() {
-				let parmas={}
+				let parmas={
+				}
 				if(this.search){
 					if(this.dataObj.awb!=undefined){
 						parmas.awb=this.dataObj.awb
@@ -168,17 +169,15 @@
 					if(this.dataObj.productCode!=undefined){
 						parmas.productCode=this.dataObj.productCode
 					}
-				}else{
-					 parmas = {
+				}else {
+					parmas = {
 						page: this.page,
 						size: this.size
 					}
-					
 				}
 				
 				console.log(parmas)
-				// sortingRegister/findSortingRegiste
-				this.$REQ.get(parmas, "sortingRegister/findSortingRegisterPage").then(res => {
+				this.$REQ.get(parmas , "sortingRegister/findSortingRegisterPage").then(res => {
 					console.log(res)
 					res.flag ? (this.totalPage = res.result.totalPages, res.result.content.length == 0 ? this.status =
 						"noMore" : (res.result.content.forEach(item => {

@@ -62,7 +62,7 @@
 						{{lang.bass.goodsName}}
 					</view>
 					<view class="myInput">
-						<input type="text" value="" v-model="goodName" />
+						<input type="text" value="" v-model="goodsName" />
 					</view>
 				</view>
 				<view class="uni-add-list">
@@ -114,7 +114,7 @@
 				showRightText: false,
 				weight: 0,
 				barCode: '',
-				goodName: '',
+				goodsName: '',
 				palletNumber: '',
 				borcode: '',
 				inputDate: '',
@@ -200,22 +200,6 @@
 				this.$refs.date.show()
 			},
 			chooseInfo() {
-				// barCode 
-				// inputDateStart 
-				// inputDateEnd 
-				// wmsWarehouseId 
-				// palletNumber 
-				// weight
-				// goodsType 
-				// goodsName 
-				// updaterName
-				// updateDateStart
-				// updateDateEnd
-
-
-
-
-
 				let parmas = {}
 				if (this.barCode != '') {
 					parmas.barCode = this.barCode
@@ -254,6 +238,7 @@
 				if (this.updaterName != '') {
 					parmas.updaterName = this.updaterName
 				}
+				console.log(parmas)
 
 				this.$api.navTo(`/pages/inStore/historyInStore?id=${JSON.stringify(parmas)}`)
 			}

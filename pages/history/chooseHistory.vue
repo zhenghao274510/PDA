@@ -146,7 +146,7 @@
 		},
 		methods: {
 			changeGoods(e){
-				this.goods=e.newVal;
+				this.goods=e.orignItem.label;
 				console.log(e)
 			},
 			changeHouse(e){
@@ -201,7 +201,7 @@
 					parmas.wmsWarehouseId=this.wmsWarehouseId
 				}
 				if(this.goods!=''){
-					parmas.goodsType=this.goodsType
+					parmas.goodsType=this.goods
 				}
 				if(this.productCode!=''){
 					parmas.productCode=this.productCode

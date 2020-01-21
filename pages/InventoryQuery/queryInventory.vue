@@ -143,12 +143,12 @@
 			return {
 				showMore: false,
 				page: 1,
-				size: '10',
+				size: 10,
 				totalPage: 1,
 				dataList: [],
 				status: 'loading',
-				barCode:'',
-				search:false
+				barCode: '',
+				search: false
 			}
 		},
 		components: {
@@ -161,7 +161,7 @@
 			])
 		},
 		onLoad(options) {
-			options.id!=undefined?(this.dataObj=JSON.parse(options.id),this.search=true):this.barCode=''
+			options.id != undefined ? (this.dataObj = JSON.parse(options.id), this.search = true) : this.barCode = ''
 			this.loadData()
 		},
 		onPullDownRefresh() {
@@ -193,56 +193,60 @@
 				e == 0 ? uni.navigateBack() : this.$api.navTo("/pages/InventoryQuery/jiluchoose")
 			},
 			loadData() {
-				let parmas = {}
+				let parmas = {
+				}
 				if (this.search) {
-					if (this.dataObj.barCode !=undefined) {
+					if (this.dataObj.barCode != undefined) {
 						parmas.barCode = this.dataObj.barCode
 					}
-					if (this.dataObj.awb !=undefined) {
+					if (this.dataObj.awb != undefined) {
 						parmas.awb = this.dataObj.awb
 					}
-					if (this.dataObj.goodsName !=undefined) {
+					if (this.dataObj.goodsName != undefined) {
 						parmas.goodsName = this.dataObj.goodsName
 					}
-					if (this.dataObj.wmsWarehouseId !=undefined) {
+					if (this.dataObj.wmsWarehouseId != undefined) {
 						parmas.wmsWarehouseId = this.dataObj.wmsWarehouseId
 					}
-					if (this.dataObj.goodsType !=undefined) {
+					if (this.dataObj.goodsType != undefined) {
 						parmas.goodsType = this.dataObj.goodsType
 					}
-					if (this.dataObj.wmsWarehouseDetailName !=undefined) {
+					if (this.dataObj.wmsWarehouseDetailName != undefined) {
 						parmas.wmsWarehouseDetailName = this.dataObj.wmsWarehouseDetailName
 					}
-					
-					if (this.dataObj.inputDateStart !=undefined) {
+
+					if (this.dataObj.inputDateStart != undefined) {
 						parmas.inputDateStart = this.dataObj.inputDateStart
 					}
-					if (this.dataObj.inputDateEnd !=undefined) {
+					if (this.dataObj.inputDateEnd != undefined) {
 						parmas.inputDateEnd = this.dataObj.inputDateEnd
 					}
-					if (this.dataObj.stockState !=undefined) {
+					if (this.dataObj.stockState != undefined) {
 						parmas.stockState = this.dataObj.stockState
 					}
-					if (this.dataObj.outputDateStart !=undefined) {
+					if (this.dataObj.outputDateStart != undefined) {
 						parmas.outputDateStart = this.dataObj.outputDateStart
 					}
-					if (this.dataObj.outputDateEnd !=undefined) {
+					if (this.dataObj.outputDateEnd != undefined) {
 						parmas.outputDateEnd = this.dataObj.outputDateEnd
 					}
-					if (this.dataObj.updaterName !=undefined) {
+					if (this.dataObj.updaterName != undefined) {
 						parmas.updaterName = this.dataObj.updaterName
 					}
-					if (this.dataObj.updateDateStart !=undefined) {
+					if (this.dataObj.updateDateStart != undefined) {
 						parmas.updateDateStart = this.dataObj.updateDateStart
 					}
-					if (this.dataObj.updateDateEnd !=undefined) {
+					if (this.dataObj.updateDateEnd != undefined) {
 						parmas.updateDateEnd = this.dataObj.updateDateEnd
 					}
-					if (this.dataObj.inStockDayStart !=undefined) {
+					if (this.dataObj.inStockDayStart != undefined) {
 						parmas.inStockDayStart = this.dataObj.inStockDayStart
 					}
-					if (this.dataObj.inStockDayEnd !=undefined) {
+					if (this.dataObj.inStockDayEnd != undefined) {
 						parmas.inStockDayEnd = this.dataObj.inStockDayEnd
+					}
+					if(this.dataObj.productCode!=''){
+						parmas.productCode=this.dataObj.productCode
 					}
 				} else {
 					parmas = {
@@ -252,12 +256,12 @@
 				}
 				this.$REQ.get(parmas, "stock/findStockPage").then(res => {
 					console.log(res)
-				res.result.content.length==0?this.status = "noMore":this.status = "more";
+					res.result.content.length == 0 ? this.status = "noMore" : this.status = "more";
 					res.flag == true ? (this.totalPage = res.result.totalPages, res.result.content.forEach(item => {
 						item.showMore = false;
 						item.inputDate = this.$api.formatTime(item.inputDate);
 						item.outputDate = this.$api.formatTime(item.outputDate);
-						item.updateDate=this.$api.formatTime(item.updateDate);
+						item.updateDate = this.$api.formatTime(item.updateDate);
 						this.dataList.push(item);
 					})) : this.$refs.Message.error({
 						content: this.$api.getError(res.errorCode),

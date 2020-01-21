@@ -162,7 +162,8 @@
 				})
 			},
 			loadData() {
-				let parmas = {}
+				let parmas = {
+				}
 				if (this.search) {
 					if (this.dataObj.barCode != undefined) {
 						parmas.barCode = this.dataObj.barCode
@@ -198,12 +199,14 @@
 					if (this.dataObj.updateDateEnd != undefined) {
 						parmas.updateDateEnd = this.dataObj.updateDateEnd
 					}
+					if(this.dataObj.consignor!=undefined){
+						parmas.consignor=this.dataObj.consignor
+					}
 				} else {
-
-					parmas = JSON.stringify({
+					parmas = {
 						page: this.page,
-						size: this.size,
-					})
+						size: this.size
+					}
 				}
 
 				console.log(parmas)

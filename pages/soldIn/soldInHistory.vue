@@ -169,7 +169,7 @@
 					if (this.dataObj.updateDateStart != undefined) {
 						parmas.updateDateStart = this.dataObj.updateDateStart
 					}
-					
+
 					if (this.dataObj.updateDateEnd != undefined) {
 						parmas.updateDateEnd = this.dataObj.updateDateEnd
 					}
@@ -183,19 +183,19 @@
 						parmas.updaterName = this.dataObj.updaterName
 					}
 				} else {
-					parmas = JSON.stringify({
+					parmas = {
 						page: this.page,
 						size: this.size
-					})
+					}
 				}
-                 console.log(parmas)
+				console.log(parmas)
 				this.$REQ.get(parmas, "billPutOn/findBillPutOnPage").then(res => {
 					console.log(res)
 					res.flag == true ? (this.status = "more", this.totalPage = res.result.totalPages, res.result.content.forEach(
 						item => {
 							item.showMore = false;
 							item.putOnDate = this.$api.formatTime(item.putOnDate);
-							item.updateDate=this.$api.formatTime(item.updateDate)
+							item.updateDate = this.$api.formatTime(item.updateDate)
 							this.dataList.push(item);
 						})) : this.$refs.Message.error({
 						content: this.$api.getError(res.errorCode),

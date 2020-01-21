@@ -162,7 +162,8 @@
 				e == 0 ? uni.navigateBack() : this.$api.navTo("/pages/inStore/inStorechoose")
 			},
 			loadData() {
-				let parmas = {}
+				let parmas = {
+				}
 				
 				if (this.search) {
 					if (this.dataObj.barCode != undefined) {
@@ -201,16 +202,15 @@
 					if (this.dataObj.updaterName != undefined) {
 						parmas.updaterName = this.dataObj.updaterName
 					}
-				} else {
-
-					parmas = JSON.stringify({
+				}else {
+					parmas = {
 						page: this.page,
-						size: this.size,
-					})
+						size: this.size
+					}
 				}
 
 				console.log(parmas)
-				this.$REQ.get(parmas, "billInput/findBillInputPage").then(res => {
+				this.$REQ.get(parmas , "billInput/findBillInputPage").then(res => {
 					console.log(res)
 					res.flag ? (this.totalPage = res.result.totalPage, res.result.content.length == 0 ? this.status = "noMore" : (
 						res.result.content.forEach(item => {

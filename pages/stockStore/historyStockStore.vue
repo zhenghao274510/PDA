@@ -167,10 +167,10 @@
 						parmas.updateDateEnd = this.dataObj.updateDateEnd
 					}
 				} else {
-					parmas = JSON.stringify({
+					parmas = {
 						page: this.page,
 						size: this.size,
-					})
+					}
 				}
 				console.log(parmas)
 				this.$REQ.get(parmas, "billStockCheck/findBillStockCheckPage").then(res => {

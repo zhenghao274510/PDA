@@ -14,7 +14,7 @@
 				</view>
 				<view class="uni-add-list">
 					<view class="uni-add-list-one">
-						{{lang.common.putOnDate}}
+						{{lang.common.startDateStart}}
 					</view>
 					<view class="myInput flex-date">
 						<view class="time" @click="choseDate(0)">
@@ -28,7 +28,7 @@
 				</view>
 				<view class="uni-add-list">
 					<view class="uni-add-list-one">
-						{{lang.common.putOnDate}}
+						{{lang.common.endDateEnd}}
 					</view>
 					<view class="myInput flex-date">
 						<view class="time" @click="choseDate(2)">

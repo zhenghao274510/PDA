@@ -195,7 +195,8 @@
 				uni.navigateBack();
 			},
 			choseGoods(e){
-				this.goods=e.newVal
+				console.log(e)
+				this.goods=e.orignItem.label
 			},
 			choseHouse(e){
 				this.wmsWarehouseId=e.orignItem.id
@@ -234,6 +235,9 @@
 				}
 				if(this.updaterName!=''){
 					parmas.updaterName=this.updaterName
+				}
+				if(this.consignor!=''){
+					parmas.consignor=this.consignor
 				}
 				this.$api.navTo(`/pages/outStore/historyoutStore?id=${JSON.stringify(parmas)}`)
 			}

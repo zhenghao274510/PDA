@@ -140,16 +140,6 @@
 			},
 			loadData() {
 				let parmas = {}
-				// barCode
-				// putOffDateStart
-				// putOffDateEnd
-				// productCode
-				// goodsName
-				// wmsWarehouseId
-				// wmsWarehouseDetailName
-				// updaterName
-				// updateDateStart
-				// updateDateEnd
 				if (this.search) {
 					if (this.dataObj.barCode != undefined) {
 						parmas.barCode = this.dataObj.barCode
@@ -184,10 +174,10 @@
 						parmas.updaterName = this.dataObj.updaterName
 					}
 				} else {
-					parmas = JSON.stringify({
+					parmas = {
 						page: this.page,
 						size: this.size
-					})
+					}
 				}
 				console.log(parmas)
 				this.$REQ.get(parmas, "billPutOff/findBillPutOffPage").then(res => {

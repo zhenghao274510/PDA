@@ -33,12 +33,9 @@ const api = {
 				}
 			})
 			str4=val[num];
-			// console.log(str4)
-			// setTimeout(()=>{
 				for(let i;i<arr.length;i++){
-					// let newStr=arr[i].split("=")
 					console.log(1)
-					 str4=str4.replace('{'+arr[i].split('=')[0]+'}',arr[i].split('=')[1])
+					 str4=str4.replace(new RegExp(/\'{'+arr[i].split('=')[0]+'}'/g,arr[i].split('=')[1]) )
 				}
 				console.log(str4)
 			// })

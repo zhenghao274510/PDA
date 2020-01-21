@@ -234,11 +234,6 @@
 				if (this.putOnDateEnd != '结束日期') {
 					parmas.putOnDateEnd = this.putOnDateEnd
 				}
-				// updaterName: "",
-				// updateDateStart:'开始日期',
-				// updateDateEnd:"结束日期",
-				// putOnDateStart:"开始日期",
-				// putOnDateEnd:"结束日期",
 				console.log(parmas)
 				this.$api.navTo(`/pages/soldIn/soldInHistory?id=${JSON.stringify(parmas)}`)
 			}

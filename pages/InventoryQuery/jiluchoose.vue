@@ -17,7 +17,7 @@
 						AWB
 					</view>
 					<view class="myInput">
-						<input type="number" v-model="awb" />
+						<input type="text" v-model="awb" />
 					</view>
 				</view>
 				<view class="uni-add-list">
@@ -327,7 +327,7 @@
 				if(this.outputDateEnd!='结束日期'){
 					parmas.outputDateEnd=this.outputDateEnd
 				}
-				if(this.stockState!=''){
+				if(this.choseStoreState!=''){
 					parmas.stockState=this.choseStoreState
 				}
 				if(this.updateDateStart!='开始日期'){
@@ -341,6 +341,9 @@
 				}
 				if(this.inStockDayEnd!=''){
 					parmas.inStockDayEnd=this.inStockDayEnd
+				}
+				if(this.productCode!=''){
+					parmas.productCode=this.productCode
 				}
 				console.log(parmas)
 				this.$api.navTo(`/pages/InventoryQuery/queryInventory?id=${JSON.stringify(parmas)}`)
